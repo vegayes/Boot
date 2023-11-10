@@ -9,7 +9,6 @@ public class SecurityConfig {
 	
 	@Bean
 	public BCryptPasswordEncoder bCryptPasswordEncoder() {
-		
 		return new BCryptPasswordEncoder(); // BCryptPasswordEncoder 새로 만들어서 Bean 등록함. 
 	}
 	
