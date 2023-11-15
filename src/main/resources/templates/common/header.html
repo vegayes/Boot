@@ -44,11 +44,9 @@
  <nav>
      <ul>
      
-         <li><a href="#">공지사항</a></li>
-         <li><a href="#">자유게시판</a></li>
-         <li><a href="#">질문게시판</a></li>
-         <li><a href="#">FAQ</a></li>
-         <li><a href="#">1:1문의</a></li>
-     
+		 <li th:each = "boardType : ${application.boardTypeList}">
+			 <a href="#" th:text="${boardType.BOARD_NAME}">게시판 이름</a>
+		 </li>
+         
      </ul>
  </nav>
