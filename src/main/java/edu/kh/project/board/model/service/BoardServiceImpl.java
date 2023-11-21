@@ -78,7 +78,7 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public Board selectBoardList(Map<String, Object> map) {
 		
-		Board board = mapper.selectBoardList(map);
+		Board board = mapper.selectBoard(map);
 		
 		return board;
 	}

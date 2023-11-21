@@ -20,7 +20,7 @@ public interface BoardMapper {
 	public List<Board> selectBoardList(int boardCode, RowBounds rowBounds);
 
 	// 게시글 상세 조회
-	public Board selectBoardList(Map<String, Object> map) ;
+	public Board selectBoard(Map<String, Object> map) ;
 
 	/** 좋아요 여부 확인 DAO
 	 * @param map
