@@ -140,7 +140,7 @@
 
 
 	
-	<!--  특정 게시글 댓글 조회 (바뀔 예쩡)  -->
+	<!--  특정 게시글 댓글 조회 (바뀔 예쩡) --> 
 	<select id = "selectCommentList" resultMap = "comment_rm">
 		SELECT LEVEL, C.* FROM 
 			(SELECT COMMENT_NO, COMMENT_CONTENT,
@@ -154,7 +154,7 @@
 		CONNECT BY PRIOR COMMENT_NO = PARENT_NO
 		ORDER SIBLINGS BY COMMENT_NO
 	</select>
-	
+
 	
 	<!-- 좋아요 여부 확인 -->
 	<select id = "boardLikeCheck" resultType = "_int">

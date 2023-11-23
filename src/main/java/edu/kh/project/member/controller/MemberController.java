@@ -52,6 +52,7 @@ public class MemberController {
 			model.addAttribute("loginMember", loginMember);
 			// -> 현재는 request scope
 			
+			System.out.println("loginMember : " + loginMember.getMemberNo());
 
 			
 			// 쿠키 생성(해당 쿠키에 담을 데이터를 k:v 로 지정)

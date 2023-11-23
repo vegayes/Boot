@@ -301,7 +301,9 @@ public class BoardController {
 			
 			path = "board/boardDetail"; // forward 할 jsp 경로
 			
+			System.out.println("게시글의 회원정보 얻어왔음 : " + board.getMemberNo());
 			model.addAttribute("board",board);
+			
 			
 			
 			// 게시글에 이미지가 있을 경우

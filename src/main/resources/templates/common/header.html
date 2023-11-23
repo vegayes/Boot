@@ -47,6 +47,10 @@
 		 <li th:each = "boardType : ${application.boardTypeList}">
 			 <a th:href="@{board/{boardCode}(boardCode = ${boardType.BOARD_CODE})}" th:text="${boardType.BOARD_NAME}">게시판 이름</a>
 		 </li>
+		 
+		 <li>
+			 <a th:href = "@{/chatting}" th:text="채팅" > 채팅</a>
+		 </li>
          
      </ul>
  </nav>

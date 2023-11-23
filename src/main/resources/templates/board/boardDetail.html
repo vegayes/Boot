@@ -140,10 +140,9 @@
 				   (NullPointerException 방지)
 				 -->
 				
-                 <th:block th:if="${session.loginMemeber?.memberNo == board.memberNo}">
+                 <th:block th:if="${session.loginMember?.memberNo == board.memberNo}">
 	                  <button id = "updateBtn">수정</button>     
 	                  <button id = "deleteBtn">삭제</button>
-                 
                  </th:block>
 
                 <button id="goToListBtn">목록으로</button>

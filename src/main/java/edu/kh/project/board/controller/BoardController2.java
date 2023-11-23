@@ -148,20 +148,16 @@ public class BoardController2 {
 							  @RequestParam(value="cp", required =false, defaultValue = "1") int cp, // 쿼리스트링 유지
 							  @RequestParam(value ="images", required=false) List<MultipartFile> images,
 							  @RequestParam(value = "deleteList", required =false) String deleteList, // 삭제할 이미지 순서
-							  HttpSession session, // 서버 파일 저장 경로 얻어올 용도
 							  RedirectAttributes ra // 리다이렉트 시 값 전달용 (message)
 							  ) throws IllegalStateException, IOException{
 		// 1) boardCode, boardNo를 커맨드 객체(board)에 세팅
 		board.setBoardCode(boardCode);
 		board.setBoardNo(boardNo);
 		// board ( boardCode, boardNo, boardTitle, boardContent)
-		
-		// 2) 이미지 서버 저장경로, 웹 접근 경로
-		String webPath = "/resources/images/board/";
-		String filePath = session.getServletContext().getRealPath(webPath);
+
 		
 		// 3) 게시글 수정 서비스 호출
-		int rowCount = service.boardUpdate(board, images, webPath, filePath, deleteList);
+		int rowCount = service.boardUpdate(board, images, deleteList);
 		
 		// 4) 결과에 따라 message, path 설정
 		String message = null;
