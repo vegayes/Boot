@@ -21,7 +21,7 @@
         <section class="board-list">
 
             <h1 class="board-name" th:text="${boardName}">게시판 이름</h1>
-			
+				
 			<h3 style = "margin:30px" th:if="${param.query}" th:text='|"${param.query}"  검색결과|'></h3>			
 			
 
@@ -69,7 +69,6 @@
 	                                <!-- 검색O -->
 	                                <!-- key랑 쿼리 스트링이 필요 -->  
 	                                <a th:if = "${param.query}" th:href="@{/board/{boardCode}/{boardNo}(boardCode=${boardCode}, boardNo =${board.boardNo}, cp=${pagination.currentPage}, key = ${param.key}, query = ${param.query})}" th:text = "${board.boardTitle}">게시글 제목</a>   
-	                                
 	                                <th:block th:text="|[${board.commentCount}]|">댓글 수</th:block>
 
 	                            </td>
