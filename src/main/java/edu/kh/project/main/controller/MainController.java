@@ -25,6 +25,7 @@ public class MainController {
 		// html이 없어서 vs랑 연계해서 하기. 
 		
 		return "common/main";
+//		return "board/boardList";
 	}
 	
 	
